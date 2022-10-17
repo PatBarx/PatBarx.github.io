@@ -86,5 +86,10 @@ main{
     align-items: center;
 
 }
+.img-Carrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
 /*MEDIA*/
