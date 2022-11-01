@@ -40,14 +40,21 @@
     font-family: "hodor";
     font-size: 18px;
     margin: 5px;
-    text-decoration: none;
-
-    
+    text-decoration: none;    
 }
+
 .img-Carrousel-individual{
     border: 1px solid  rgb(255 186 59);
 }
-
+.img-stars{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    z-index: -1;
+}
 footer{
     background-color: #942100;
     padding: 20px;
