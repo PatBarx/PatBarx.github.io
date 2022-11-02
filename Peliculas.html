@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Potter Web: Peliculas de la Saga</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style-home.css">
-    <link rel="stylesheet" href="flexbox-home.css">
+    <link rel="stylesheet" href="style-peliculas.css">
+ <!--   <link rel="stylesheet" href="flexbox-home.css">   -->
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/hodor" rel="stylesheet">
 </head>
@@ -53,16 +53,64 @@
             </div>
 
             <div class="colum-ppal">
+                <div class="carrusel">
+                    <button onclick="retroceder()" class="btn-flecha"><img src="./IMG/PELICULAS/arrwIzq.png" alt="Anterior"></button>
+                    <img id="img-poster" src="./IMG/PELICULAS/0.png" alt="Peliculas" height="500px">
+                    <button onclick="avanzar()" class="btn-flecha"><img src="./IMG/PELICULAS/arrwDer.png" alt="Siguiente"></button>
+                </div>
+
+                <div class="colum-anexo">
+                    <div class="sinopsis"></div>
+                    <div class="posters-tira"></div>
+                </div>
 
                
             </div>
-
+            <img class="img-stars" src="./IMG/StarsPng.png" width="50%">    
         </main>
 
         <footer>
             <p class="copyright">* by Pat-B *</p>
         </footer>
     </div>
+    <script>
+        let i = 0;
+        let carrPosters = [
+        "./IMG/PELICULAS/0.png",
+        "./IMG/PELICULAS/1.png",
+        "./IMG/PELICULAS/2.png",
+        "./IMG/PELICULAS/3.png",
+        "./IMG/PELICULAS/4.png",
+        "./IMG/PELICULAS/5.png",
+        "./IMG/PELICULAS/6.png",
+        "./IMG/PELICULAS/7.png",
+        "./IMG/PELICULAS/7-2.png",
+        "./IMG/PELICULAS/animFan1.png",
+        "./IMG/PELICULAS/animFan2.jpg",
+        "./IMG/PELICULAS/animFan3.png"
+        ]
+
+        function cambiaImg(){
+            let img = document.getElementById("img-poster");
+            img.src = carrPosters[i];
+        }
+        function avanzar(){
+            if(i < carrPosters.length - 1){
+             i ++;
+            } else {
+                i= 0;
+            }
+            cambiaImg();
+        }
+        function retroceder(){
+            if(i > 0){
+             i --;
+            } else {
+                i = carrPosters.length - 1;
+            }
+            cambiaImg();
+        }
+    </script>
 </body>
 
 </html>
