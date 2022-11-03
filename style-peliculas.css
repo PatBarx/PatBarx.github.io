@@ -27,6 +27,15 @@
     background-size: auto 100%;
     background-position: bottom right;
 }
+.colum-iz-nav-links a{
+    padding: 5px;
+    margin-bottom: 20px;
+    color:  rgb(255 186 59);
+    font-family: "hodor";
+    font-size: 18px;
+    margin: 5px;
+    text-decoration: none;    
+}
 .colum-ppal{
     width: 100%;
     background-image: url(./IMG/img-bkg-Hgw.png);
@@ -42,19 +51,23 @@
     margin: 0px;
     padding: 0%;
 }
-.colum-iz-nav-links a{
-    padding: 5px;
-    margin-bottom: 20px;
-    color:  rgb(255 186 59);
-    font-family: "hodor";
-    font-size: 18px;
-    margin: 5px;
-    text-decoration: none;    
-}
-
-.img-Carrousel-individual{
+/*.img-Carrousel-individual{
     border: 1px solid  rgb(255 186 59);
+}*/
+.colum-anexo{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    padding: 5px;
 }
+.sinopsis h3 {
+    margin-top: 25px;
+    margin-bottom:25px; 
+    text-align: center;
+}
+.sinopsis p {
+    margin-right: 10px;
+    line-height: normal;    
+    }
 .img-stars{
     position:absolute;
     top: 0;
@@ -104,12 +117,24 @@ main{
     flex-direction: column;
     align-items: center;
 }
+.colum-ppal{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
 .carrousel{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
+    width: 58%;
     justify-content: flex-start;
+}
+.colum-anexo{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    justify-content: space-between;
 }
 
 .img-Carrousel{
@@ -118,5 +143,7 @@ main{
     justify-content: space-around;
     height: 100%;
 }
+
+
 
 /*MEDIA*/

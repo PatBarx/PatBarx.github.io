@@ -60,8 +60,14 @@
                 </div>
 
                 <div class="colum-anexo">
-                    <div class="sinopsis"></div>
-                    <div class="posters-tira"></div>
+                    <div class="sinopsis">
+                        <h3>SINOPSIS</h3>
+                        <p id="sinop-peli">Descubre la coleccion completa de peliculas basadas en los libros de JK Rowling</p>
+                    </div>
+
+                    <div class="posters-tira">
+                        <img id="img-opinion" src="./IMG/PelisOpinion/0mini.png" alt="Opiniones" width="100%">
+                    </div>
                 </div>
 
                
@@ -89,10 +95,42 @@
         "./IMG/PELICULAS/animFan2.jpg",
         "./IMG/PELICULAS/animFan3.png"
         ]
+        let sinopsisPelis = [
+            "Descubre la coleccion completa de peliculas basadas en los libros de JK Rowling",
+            "Harry Potter: Y La Piedra Filosofal: \nCuando Harry Potter cumple 11 años se entera que es huérfano, hijo de dos magos y que posee poderes mágicos. En la Escuela de Magia y Brujería de Hogwarts aprende a jugar el deporte de alturas, Quidditch y juega un emocionante juego de ajedrez, en vías a encarar al Mago Oscuro que está empeñado en destruirlo.",
+            "Harry Potter y la cámara secreta: \nEl joven mago Harry Potter, Ron Weasley y Hermione Granger se enfrentan a nuevos retos. Durante su segundo año en el Colegio Hogwarts de Magia y Hechicería, estos jovencitos intentan descubrir una fuerza oscura que esta aterrorizando al Colegio. Después de un largo verano, Harry Potter vuelve a la escuela donde de pronto empezará a preocuparse por la supervivencia, cuando cosas terribles comienzan a pasarle a él y a sus compañeros. Misteriosamente, palabras escritas sobre la pared brillan advirtiendo que “la cámara secreta ha sido abierta”.",
+            "Harry Potter y el Prisionero de Azkaban: \nEn su tercer año en Hogwarts, Harry, Ron y Hermione conocen a Sirius Black, el prisionero que ha escapado de Azkaban y aprenden a acercarse a un Hippogriffo mitad caballo/ mitad águila, a como transformar a los cambiantes Boggarts y el arte de la Adivinación. Harry deberá enfrentárse a los Dementores que son ladrones de almas, defenderse del peligroso hombre lobo y lidiar con la verdad acerca de la relación entre Sirius Black y sus padres.",
+            "Harry Potter y El Cáliz de Fuego: \nCuando el nombre de Harry Potter emerge del Cáliz de Fuego, se convierte en un competidor en una batalla agotadora por la gloria entre tres colegios de magos – El Torneo de los Tres Magos. Pero ya que Harry nunca presentó su nombre para El Torneo, ¿quién lo hizo? Ahora Harry debe enfrentar a un dragón infalible, demonios acuáticos feroces y un laberinto encantado, solamente para encontrarse con el cruel descubrimiento de El Quien No Debe Ser Nombrado. Todo cambia cuando Harry, Ron y Hermione dejan la niñez por siempre y asumen retos mayores que jamás hubieran imaginado." ,
+            "Harry Potter y la Orden del Fénix: \nLord Voldemort ha vuelto pero el Ministerio de Magia ha hecho todo lo posible para esconder la verdad ante el mundo de la Magia, incluyendo a Dolores Umbridge, la oficial del Ministerio quien ahora será también profesora de Defensa contra las Artes Oscuras en Hogwarts. Ron y Hermione convencen a Harry para que entrene en secreto a un selecto grupo de estudiantes preparándolos para la guerra de magos que se avecina. Esto sucede porque la profesora Dolores se rehúsa a practicar la magia defensiva con los alumnos. ¡Prepárate para la batalla!" ,
+            "Harry Potter Y El Misterio Del Principe: \nMientras Lord Voldemort sigue atemorizando en el mundo de los magos y el de los Muggles, Hogwarts ya no es un lugar seguro. Harry sospecha que los peligros podrían estar dentro del mismo castillo, pero Dumbledore está más preocupado en prepararlo para la batalla final que se aproxima. Juntos trabajan para encontrar las debilidades de Voldemort, y Dumbledore recluta a uno de sus viejos amigos y colaboradores Horace Slughorn, quien parece tener información crucial al respecto. Aún con todas las adversidades que enfrentan, el romance florece para Harry, Ron y Hermione." ,
+            "Harry Potter y Las Reliquias de la Muerte - Parte 1: \nHarry, Ron y Hermione se involucran en una peligrosa misión para vencer y destruir el elemento clave que le hace a Voldemort ser inmortal e indestructible: los Horrocruxes." ,
+            "Harry Potter y Las Reliquias de la Muerte - Parte 2: \nEs la aventura final de la saga de Harry Potter. La película, que es un evento muy esperado, es la segunda de las dos partes de las que se compone esta entrega. Su final es épico y en él se narra la batalla de las fuerzas del bien y del mal de este mundo mágico, en una guerra sin cuartel. Las apuestas nunca han sido tan altas y nadie está a salvo. Sin embargo, es Harry Potter quien puede ser llamado al último sacrificio, mientras se avecina el enfrentamiento final con Lord Voldemort; todo acaba aquí.",
+            "Animales fantásticos y dónde encontrarlos: \nComienza en 1926 a medida que Newt Scamander acaba de terminar una excursión por todo el mundo para encontrar y documentar una extraordinaria variedad de creaturas mágicas. Al llegar a Nueva York para una breve escala, quizás pudo haber llegado y partido sin incidente... si no fuera por un No-Maj (término estadounidense para Muggle) llamado Jacob, un caso mágico perdido y la escapada de algunas de las bestias fantásticas de Newt, lo que podría significar problemas para los mundos tanto de los magos como de los No-Maj.",
+            "Animales fantásticos: Los crímenes de Grindelwald. \nEl joven mago, Newt Schamander, junto con sus compañeros Jacob Kowalski y las hermanas Tina y Queenie Goldstein, tendrá que hacer frente a las nuevas amenazas de Grindelwald. El mago ha escapado y está reuniendo a un grupo de seguidores que no sospecha de sus verdaderas intenciones: alzar a los magos por encima de las criaturas no mágicas." ,
+            "Animales fantásticos: Los Secretos de Dumbledore. \nEl profesor Albus Dumbledore (Law) sabe que el poderoso mago tenebroso Gellert Grindelwald (Mikkelsen) se está moviendo para tomar el control del mundo mágico. Incapaz de detenerlo solo, le encarga al magizoólogo Newt Scamander (Redmayne) que guíe a un intrépido grupo de magos, brujas y un valiente panadero muggle en una peligrosa misión, donde se encuentran con viejas y nuevas bestias, y se enfrentan a la creciente legión de seguidores de Grindelwald. Pero, con tanto en juego, ¿cuánto tiempo podrá permanecer Dumbledore al margen?"
+        ]
+        let imgsOpinion = [
+            "./IMG/PelisOpinion/0mini.png",
+            "./IMG/PelisOpinion/1mini.png",
+            "./IMG/PelisOpinion/2mini.png",
+            "./IMG/PelisOpinion/3mini.png",
+            "./IMG/PelisOpinion/4mini.png",
+            "./IMG/PelisOpinion/5mini.png",
+            "./IMG/PelisOpinion/6mini.png",
+            "./IMG/PelisOpinion/7mini.png",
+            "./IMG/PelisOpinion/8mini.png",
+            "./IMG/PelisOpinion/9mini.png",
+            "./IMG/PelisOpinion/10mini.png",
+            "./IMG/PelisOpinion/11mini.png"
+        ]
 
         function cambiaImg(){
             let img = document.getElementById("img-poster");
             img.src = carrPosters[i];
+            let sinop = document.getElementById("sinop-peli");
+            sinop.innerHTML = sinopsisPelis[i];
+            let opin = document.getElementById("img-opinion");
+            opin.src = imgsOpinion[i];
         }
         function avanzar(){
             if(i < carrPosters.length - 1){
