@@ -95,12 +95,13 @@
 }
 .sitios{
     background-color: rgba(19, 0, 0, 0.75);
-    padding: 20px;
-    padding-left: 20%;
+       
     line-height: 1.5;
     color: rgb(255 186 59);
-    font-family: arial;
-    line-height: 1.5;
+    font-family: arial;   
+}
+.link{
+    padding-left: 20%;
 }
 .link a:link, a:visited{
     color: rgb(255 186 59);
