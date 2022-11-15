@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Potter Web: Contactanos</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style-home.css">
-    <link rel="stylesheet" href="flexbox-home.css">
+    <link rel="stylesheet" href="style-contacto.css">
+    <!--   <link rel="stylesheet" href="flexbox-home.css">   -->
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/hodor" rel="stylesheet">
 </head>
@@ -53,7 +53,57 @@
             </div>
 
             <div class="colum-ppal">
+                <div class="izq">
+                    <div class="formulario">
+                        <form onsubmit="return enviar()">
+                            <h1>CONTACTO MAGICO:</h1>
+                            <br>
+                            <label for="motivo">Motivo:</label> <br>                        
+                            <input type="text" id="motivo" name="motivo">
+                            <br>
+                            <label for="nombre">Nombre:</label> <br>                        
+                            <input type="text" id="nombre" name="nombre">
+                            <br>
+                            <label for="mail">e-Mail:</label> <br>
+                            <input type="text" id="mail" name="mail">
+                            <br>
+                            <label for="mje">Comentarios:</label> <br>
+                            <textarea id="mje" name="mje" rows="10" ></textarea>
+                            <br>
+                            <input type="checkbox" id="info" name="info" value="EnviarInfo">
+                            <label for="info">* Quiero recibir las novedades!</label>                        
+                            <br>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div> 
+                </div>
 
+                <div class="der">
+                    <div id="datos">            
+                        <h1>Correspondencia!</h1>
+                        <ul id="error"></ul>
+                        <div id="lista"> </div>                        
+                    </div>
+                    <div class="sitios">
+                        <br>
+                        <div class="link">
+                            <img src="./IMG/CONTACTO/img1Wpp.svg" width= "25px" alt="wapp">
+                            <a href="https://walink.co/1ede46">  +54 (266)5036559</a>
+                        </div>                        
+                        <div class="link">
+                            <img src="./IMG/CONTACTO/img2G.svg" width="25px" alt="Gmail">
+                            <p style="display: inline">  soluciondigital.lp@gmail.com</p>
+                        </div>                        
+                        <div class="link">
+                            <img src="./IMG/CONTACTO/img3Ig.svg" width="25px" alt="Insta">
+                            <a href="https://www.instagram.com/solucion_digital_3d/">  @solucion_digital_3d</a>
+                        </div>                        
+                        <div class="link">
+                            <img src="./IMG/CONTACTO/img4Fb.svg" width="25px" alt="FaceBook">
+                            <a href="https://www.facebook.com/SolucionDigital3D.SL/">  @SolucionDigital3D.SL</a>
+                        </div>
+                    </div>
+                </div>
                
             </div>
 
@@ -65,4 +115,56 @@
     </div>
 </body>
 
+<Script>        
+    function enviar(){
+        //<!-- motivo/nombre/mail/mje/info/submit // datos/error/lista-->
+        let motivo = document.getElementById("motivo");
+        let nomb = document.getElementById("nombre");
+        let mail = document.getElementById("mail");
+        let msj = document.getElementById("mje");
+        let info = document.getElementById("info");
+        let lista = document.getElementById("lista");
+        let error = document.getElementById("error");
+        let completo = true;
+        error.innerHTML = "";
+        nomb.classList.remove("alerta");
+        msj.classList.remove("alerta");
+        if(motivo.value.trim() == ""){
+            const liError = document.createElement("li");
+            liError.innerHTML = "Cual es el motivo de su contacto? Indíquelo!."
+            error.appendChild(liError);
+            motivo.classList.add("alerta");
+            completo = false;
+        }
+        if(nomb.value.trim() == ""){
+            const liError = document.createElement("li");
+            liError.innerHTML = "Debe ingresar su nombre."
+            error.appendChild(liError);
+            nomb.classList.add("alerta");
+            completo = false;
+        }
+        if(mail.value.trim() == ""){
+            const liError = document.createElement("li");
+            liError.innerHTML = "Ingrese un e-mail válido."
+            error.appendChild(liError);
+            mail.classList.add("alerta");
+            completo = false;
+        }
+        if(msj.value.trim() == "" || msj.value.length > 200 ){
+            const liError = document.createElement("li");
+            liError.innerHTML = "Ingrese un Mje de hasta 200 caracteres."
+            error.appendChild(liError);
+            msj.classList.add("alerta");
+            completo = false;
+        }
+        if(completo){
+            let html = "<p>" +  nomb.value + "<b> -dice: <b> <br>" + msj.value + "<br>" + "</p>";
+            lista.innerHTML = html;
+            msj.value="";
+        } 
+        return false;
+    }
+
+
+</Script>
 </html>

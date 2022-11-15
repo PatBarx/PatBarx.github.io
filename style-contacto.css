@@ -42,35 +42,69 @@
     background-size: auto 100%;
     background-repeat: no-repeat;  
 }
-.carrousel{
-    background-color: rgba(0, 0, 0, 0.5);
+.izq, .der{
+    width: 50%;
+    padding: 10px;
+    color: rgb(255 186 59);
+    font-family: "hodor";
+    font-size: 15px;
+    margin: 5px;
+    text-decoration: none;
 }
-.btn-flecha{
-    background-color: transparent;
-    border: 0px;
-    margin: 0px;
-    padding: 0%;
-}
-.btn-flecha:hover, .btn-flecha:active{
-    scale: 115%;
-}
-/*.img-Carrousel-individual{
-    border: 1px solid  rgb(255 186 59);
-}*/
-.colum-anexo{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: aliceblue;
-    padding: 5px;
-}
-.sinopsis h3 {
-    margin-top: 25px;
-    margin-bottom:25px; 
+.formulario h1{
+    font-size: 25px;
     text-align: center;
 }
-.sinopsis p {
-    margin-right: 10px;
-    line-height: normal;    
-    }
+.formulario input, textarea, button{
+    width: 98%;
+    background-color: #94200000;
+    border-color: darkgoldenrod;
+    color: rgb(226, 226, 226);
+}
+.formulario button{
+    background-color: #942100;
+    font-weight: bold;
+    margin-inline-start: 5px;
+}
+.formulario button:hover{
+    scale: 105%;
+}
+.formulario{
+    height: auto;
+    background-color: rgba(19, 0, 0, 0.75);
+    padding: 10px;
+    line-height: 1.5;
+}
+#info{
+    width: 10px;
+}
+.der{
+    width: 50%;
+    
+}
+#datos{
+    height: 50%;
+    
+    background-color: rgba(19, 0, 0, 0.75);
+    padding: 10px;
+    line-height: 1.5;
+}
+#datos h1{
+    font-size: 20px;
+    text-align: center;
+}
+.sitios{
+    background-color: rgba(19, 0, 0, 0.75);
+    padding: 20px;
+    padding-left: 20%;
+    line-height: 1.5;
+    color: rgb(255 186 59);
+    font-family: arial;
+    line-height: 1.5;
+}
+.link a:link, a:visited{
+    color: rgb(255 186 59);
+}
 .img-stars{
     position:absolute;
     top: 0;
@@ -125,27 +159,12 @@ main{
     flex-direction: row;
     justify-content:space-between;
 }
-.carrousel{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    width: 58%;
-    justify-content: flex-start;
-}
-.colum-anexo{
+.izq{
     display: flex;
     flex-direction: column;
-    width: 42%;
     justify-content: space-between;
 }
 
-.img-Carrousel{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-}
 
 
 
