@@ -27,6 +27,14 @@
     background-size: auto 100%;
     background-position: bottom right;
 }
+.colum-ppal{
+    width: 100%;
+    background-image: url(./IMG/img-bkg-Hgw.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;  
+    padding-left: 10px;
+    padding-top: 10px;
+}
 .colum-iz-nav-links a{
     padding: 5px;
     margin-bottom: 20px;
@@ -36,49 +44,14 @@
     margin: 5px;
     text-decoration: none;    
 }
-.colum-ppal{
-    width: 100%;
-    background-image: url(./IMG/img-bkg-Hgw.png);
-    background-size: auto 100%;
-    background-repeat: no-repeat;  
+.img-productos img:hover{
+    border: 2px solid #942100;
 }
-.carrousel{
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.btn-flecha{
-    background-color: transparent;
-    border: 0px;
-    margin: 0px;
-    padding: 0%;
-}
-.btn-flecha:hover, .btn-flecha:active{
-    scale: 115%;
-}
-/*.img-Carrousel-individual{
-    border: 1px solid  rgb(255 186 59);
-}*/
-.colum-anexo{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: aliceblue;
-    padding: 5px;
-}
-.sinopsis h3 {
-    margin-top: 25px;
-    margin-bottom:25px; 
-    text-align: center;
-}
-.sinopsis p {
-    margin-right: 10px;
-    line-height: normal;    
-    }
-.img-stars{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.img-productos img{
+    margin: 5px;
+    border: 2px solid rgb(255, 186, 59);    
+    width: 20%;
     height: auto;
-    opacity: 0.5;
-    z-index: -1;
 }
 footer{
     background-color: #942100;
@@ -86,7 +59,7 @@ footer{
     text-align: center;
 }
 .copyright{
-    font-family: 'Harry Potter', sans-serif;
+    font-family: 'Harry Potter', sans-serif;                                            
     color: rgb(255 186 59);
 }
 
@@ -119,34 +92,14 @@ main{
     flex-basis: 15%;
     flex-direction: column;
     align-items: center;
+
 }
-.colum-ppal{
-    display: flex;
+.img-productos{
+    display:flex;
     flex-direction: row;
-    justify-content:space-between;
-}
-.carrousel{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    width: 58%;
-    justify-content: flex-start;
-}
-.colum-anexo{
-    display: flex;
-    flex-direction: column;
-    width: 42%;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.img-Carrousel{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-}
-
 
 
 /*MEDIA*/
