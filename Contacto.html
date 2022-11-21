@@ -24,7 +24,7 @@
                         target="_blank">PERSONAJES</a>
                     <a class="bannerSup-nav-Link" href="https://harrypotter.fandom.com/es/wiki/HarryPotter_Wiki"
                         target="_blank">WIKIFANDOM</a>
-                    <a class="bannerSup-nav-Link" href="https://www.instagram.com/stories/highlights/17879426765515078/"
+                    <a class="bannerSup-nav-Link" href="https://linktr.ee/soluciondigital3d"
                         target="_blank">REDES</a>
                 </nav>
                 <h1 class="img-bnr-fondo"><img src="./IMG/img-HExp-byn.png" alt="Hogwarts Background"></h1>
@@ -117,8 +117,9 @@
 </body>
 
 <Script>        
-    function enviar(){
-        //<!-- motivo/nombre/mail/mje/info/submit // datos/error/lista-->
+    function enviar(){        
+        let exreg = /^\w+@\w+(\.\w{2,4})+$/;
+    //<!-- motivo/nombre/mail/mje/info/submit // datos/error/lista-->
         let motivo = document.getElementById("motivo");
         let nomb = document.getElementById("nombre");
         let mail = document.getElementById("mail");
@@ -130,6 +131,8 @@
         error.innerHTML = "";
         nomb.classList.remove("alerta");
         msj.classList.remove("alerta");
+
+        //validar motivo:
         if(motivo.value.trim() == ""){
             const liError = document.createElement("li");
             liError.innerHTML = "Cual es el motivo de su contacto? Indíquelo!."
@@ -137,6 +140,7 @@
             motivo.classList.add("alerta");
             completo = false;
         }
+        //validar nombre:
         if(nomb.value.trim() == ""){
             const liError = document.createElement("li");
             liError.innerHTML = "Debe ingresar su nombre."
@@ -144,13 +148,16 @@
             nomb.classList.add("alerta");
             completo = false;
         }
-        if(mail.value.trim() == ""){
+        //validar Mail:
+        
+        if(!exreg.test(mail.value)){
             const liError = document.createElement("li");
-            liError.innerHTML = "Ingrese un e-mail válido."
+            liError.innerHTML = "Indique un correo válido: `xx@xxx.xxx`"
             error.appendChild(liError);
             mail.classList.add("alerta");
             completo = false;
         }
+        //validar mensaje:
         if(msj.value.trim() == "" || msj.value.length > 200 ){
             const liError = document.createElement("li");
             liError.innerHTML = "Ingrese un Mje de hasta 200 caracteres."
@@ -159,7 +166,7 @@
             completo = false;
         }
         if(completo){
-            let html = "<p>" +  nomb.value + "<b> -dice: <b> <br>" + msj.value + "<br>" + "</p>";
+            let html = "<p>" +  nomb.value + "  (Mail: " + mail.value +")<b> -dice: <b> <br>Motivo de Contacto: " + motivo.value + ". <br>`" + msj.value + "`<br>" + "</p>";
             lista.innerHTML = html;
             msj.value="";
         } 
